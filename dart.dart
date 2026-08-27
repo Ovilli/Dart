@@ -10,13 +10,15 @@ var listeofstaete = ["Stadt1","Stadt2","Stadt3","Stadt4","Stadt5"];
 var sum = 0;
 double week= 0;
 var einkaufslite = [];
-var aufgabe = 0;
+var aufgabe = 1;
 
 void aufgabe1() {
   print("Hallo schön dich kzl!");
 }
 
 void aufgabe2() {
+  print("Bevoelkerung ist $einwohnerzahl");
+  print("Flaeche ist $flaeche");
   print("Bevoelkerungsdichte ist ${einwohnerzahl / flaeche}");
 }
 
@@ -29,7 +31,7 @@ void aufgabe3() {
 }
 
 void aufgabe4() {
-  print("num?:");
+  print("Enter a Nummber:");
 
   int? number = int.parse(stdin.readLineSync()!);
 
@@ -38,21 +40,20 @@ void aufgabe4() {
     return;
   }
 
-  print("num: $number");
-
   if (number > 0) {
-    print("pos");
+    print("Positiv");
   } else if (number < 0) {
-    print("neg");
+    print("Negativ");
   } else {
     print("0");
   }
 }
 void aufgabe5(){
 	for(int i = 0;i<10;i++){
-		print("$i * $i");
+		//print("$i * $i");
 		print(i*i);
 	}
+  print("---------------");
 	for(var stadt in listeofstaete){
 		print(stadt);
 	}
@@ -66,7 +67,7 @@ void aufgabe6(){
       print(sum2);
     }
   }
-
+  print("---------------");
   for(int l = 0;l<=20;l++){
     if(l%3 != 0){
       print(l);
@@ -106,17 +107,22 @@ void aufgabe7(){
 aufgabe8(){
   print("Name ? ");
   String? name  = stdin.readLineSync();
-  print("Nach name");
+  print("Nachname ? ");
   String? name2  = stdin.readLineSync();
-  print("Name : $name $name2 und ich lerne dart");
+  print("Mein name ist $name $name2 und ich lerne dart");
 
-  print("day");
+  print("---------------");
+
+  print("Geburstags TAG !!");
 
   int? day = int.parse(stdin.readLineSync()!);
-  print("month");
+
+  print("Geburstags MONAT !!");
   int? month = int.parse(stdin.readLineSync()!);
 
   week = ((month-1)*4)+(day/7);
+
+  print("---------------");
   print("$week");
   
 
@@ -187,7 +193,7 @@ void topbar() {
 
 void aufgabe9() {
   while (true) {
-    print("Choose (1 = ADD ; 2 = DEL ; 3 = SHOW)");
+    print("Choose (1 = ADD ; 2 = DEL ; 3 = SHOW 4 = EXIT)");
 
     int? choose = int.tryParse(stdin.readLineSync() ?? "");
 
